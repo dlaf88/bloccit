@@ -14,8 +14,10 @@ gem 'rails', '4.1.0'
    gem 'sqlite3'
  end
 # Use SCSS for stylesheets
+gem 'pry-rails', :group => :development
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 4.0.3'
+gem 'faker' 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
