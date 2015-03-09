@@ -34,6 +34,10 @@ Rails.application.configure do
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
+  config.force_ssl = true
+  
+  config.action_mailer.default_url_options = { host: 'dlaf88-bloccit.herokuapp.com' }
+
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
