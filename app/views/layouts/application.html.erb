@@ -8,7 +8,13 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+
      <div class="container">
+       <div class='row'>
+         <% if signed_in? %>
+        Hello <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, method: :get %>
+         <% end %>
+       </div>
        <ul>
        <ul class="nav nav-tabs">
         <li><%= link_to "Bloccit", root_path %></li>
