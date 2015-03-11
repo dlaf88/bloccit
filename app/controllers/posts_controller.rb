@@ -1,10 +1,7 @@
 class PostsController < ApplicationController
   
   skip_before_action :flash_attack, only: [:index, :new]
-  
-  
-  
-  
+    
   def index
      @posts = PostPolicy::Scope.new(current_user, Post).resolve
      authorize @posts
@@ -26,6 +23,7 @@ class PostsController < ApplicationController
  def create
    @topic = Topic.find(params[:topic_id])
       @post = current_user.posts.build(post_params)
+      @post.topic = @topic
        authorize @post
      if @post.save
        flash[:notice] = "Post was saved."
