@@ -21,9 +21,9 @@ class PostsController < ApplicationController
 
   end
  def create
-   @topic = Topic.find(params[:topic_id])
+   @topic = Topic.find(params[:topic_id]) ##redundant code
       @post = current_user.posts.build(post_params)
-      @post.topic = @topic
+      @post.topic = @topic #forgot to place this here so there was no validation
        authorize @post
      if @post.save
        flash[:notice] = "Post was saved."
