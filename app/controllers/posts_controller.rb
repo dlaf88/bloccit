@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
   end
  def create
-   @topic = Topic.find(params[:topic_id]) ##redundant code
+   @topic = Topic.find(params[:topic_id]) ##redundant code?
       @post = current_user.posts.build(post_params)
       @post.topic = @topic #forgot to place this here so there was no validation
        authorize @post
