@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  skip_before_action :flash_attack, only: [:index, :new]
+  skip_before_action :flash_attack, only: [:index, :new] #minor change here
     
   def index
      @posts = PostPolicy::Scope.new(current_user, Post).resolve
