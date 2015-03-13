@@ -11,9 +11,9 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 SENDGRID_PASSWORD: ytpsfrta
 SENDGRID_USERNAME: app34443561@heroku.com 
-AWS_ACCESS_KEY_ID: AKIAIXTIEJ6SE5IW46IA
-AWS_SECRET_ACCESS_KEY: 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
+AWS_ACCESS_KEY_ID: dfadfas
+AWS_SECRET_ACCESS_KEY: thisisfake
 development:
-  AWS_BUCKET: bloccitdevdiego
+  AWS_BUCKET: thisisfacke
 production:
-  AWS_BUCKET: bloccitdevdiegoproduction
+  AWS_BUCKET: thisisfacke
