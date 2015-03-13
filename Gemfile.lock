@@ -254,7 +254,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
-  carrierwave
+  carrierwave (~> 0.10.0)
   coffee-rails (~> 4.0.0)
   devise
   faker
@@ -262,7 +262,7 @@ DEPENDENCIES
   fog (~> 1.28.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mini_magick
+  mini_magick (~> 4.1.0)
   pg
   pry-rails
   pundit
