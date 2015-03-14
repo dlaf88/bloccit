@@ -1,4 +1,4 @@
- 
+<% if policy(@comment).create? %>
 <div>
 <%= form_for [topic, post, comment] do |f| %>
 
@@ -7,3 +7,6 @@
 <% end %>
   
 </div>
+
+<% end %>
+  

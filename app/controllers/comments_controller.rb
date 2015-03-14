@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @new_comment = Comment.new
 
     
-
+    authorizw @comment
     if @comment.save
       flash[:notice] = "Comment was created."
       redirect_to [@topic, @post]
