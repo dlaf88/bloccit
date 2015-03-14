@@ -1,0 +1,12 @@
+<% if @comments.any? %>
+    
+    <% @comments.each do |comment| %>
+    
+    <ul>
+      <div><%= comment.body %> </div>
+      
+    </ul>
+    
+    <% end %>
+    
+    <% end %>

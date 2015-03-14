@@ -1,0 +1,9 @@
+ 
+<div>
+<%= form_for [topic, post, comment] do |f| %>
+
+  <%= f.text_area :body %>
+      <%= f.submit "Submit comment" %>
+<% end %>
+  
+</div>
