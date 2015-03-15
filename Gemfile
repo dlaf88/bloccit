@@ -12,6 +12,7 @@ gem 'rails', '4.1.0'
  
  group :development do
    gem 'sqlite3'
+   gem 'rspec-rails', '~> 3.0'
  end
 # Use SCSS for stylesheets
 gem 'pry-rails', :group => :development
