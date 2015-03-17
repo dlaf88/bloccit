@@ -1,16 +1,19 @@
-<% if @comments.any? %>
-    
-    <% @comments.each do |comment| %>
-    
-    <ul>
-      <div><%= comment.body %> </div>
-      
+
+<% @comments.each do |comment| %>
+
+<<%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
+  <%= link_to '#', class: 'pull-left' do %>
+    <%= image_tag(comment.user.avatar.small.url) if comment.user.avatar? %>
+  <% end %>
+  <div class="media-body">
+    <small>
+      <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
       <% if policy(comment).destroy? %>
-        | <%= link_to "Destroy", [ @post, comment], method: :delete %>
+         <%= link_to "Delete", [@post, comment], method: :delete %>
       <% end %>
-      
-    </ul>
-    
-    <% end %>
-    
-    <% end %>
+    </small>
+    <p><%= comment.body %></p>
+  </div>
+   <% end %>
+  
+  <% end %>
