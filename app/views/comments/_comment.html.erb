@@ -6,7 +6,7 @@
       <div><%= comment.body %> </div>
       
       <% if policy(comment).destroy? %>
-        | <%= link_to "Destroy", [@topic, @post, comment], method: :delete %>
+        | <%= link_to "Destroy", [ @post, comment], method: :delete %>
       <% end %>
       
     </ul>
