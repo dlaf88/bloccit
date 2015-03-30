@@ -29,7 +29,7 @@ class PostsController < ApplicationController
       @post.topic = @topic #forgot to place this here so there was no validation
        authorize @post
      if @post.save
-       @post.create
+       
        flash[:notice] = "Post was saved."
        redirect_to [@topic, @post]
      else
