@@ -11,10 +11,15 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Comment was created."
-      redirect_to [@topic,@post]
+      
     else
       flash[:error] = "Comment failed to save."
     end
+    
+     respond_to do |format|
+       format.html
+       format.js
+     end
 
    
 end

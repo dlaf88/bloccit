@@ -28,6 +28,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'redcarpet'
 gem 'fog', '~> 1.28.0'
 gem 'figaro', '1.0'
+gem 'factory_girl_rails', '~> 4.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

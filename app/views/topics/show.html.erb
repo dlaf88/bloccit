@@ -24,8 +24,9 @@
            <% if post.image? %>
            
             <p>Current image</p>
+            <% if post.user.avatar? %>
            <%= image_tag( post.image.profile.url ) %>
-           
+           <% end %>
            <% end %>
          </div>
        </div>

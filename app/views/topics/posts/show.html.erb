@@ -31,14 +31,14 @@
       <%= render partial: 'favorites/favorite', locals: { post: @post } %>
   </div>
 </div>
-<div class='row'>
-
-  <h1>Comments</h1>
-        <%= render partial: 'comments/comment', collection: @comments %>
-  
-
-
-    <%= render partial: '/comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
+<div class="row">
+  <h2>Comments</h2>
+  <div class='js-comments'>
+  <%= render partial: 'comments/comment', collection: @comments %>
+  </div>
+  <div class='new-comment'>
+   <%= render 'comments/form' %>
+  </div>
 </div>
 
-</div>
+
